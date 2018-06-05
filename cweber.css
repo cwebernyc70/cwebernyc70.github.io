@@ -85,6 +85,19 @@ article { position: relative;
 section { padding-top: 1rem;
           padding-bottom: 1rem; }
 
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu {
+	color: #C42C00;
+	display: flex;
+	justify-content: space-around;
+}
+
+
 p, ol, ul { font-size: 1.4rem;
             line-height: 2rem; }
 
@@ -126,7 +139,7 @@ section > p, section > footer, section > table { width: 55%; }
 section > ol, section > ul { width: 50%;
                              -webkit-padding-start: 5%; }
 
-li:not(:first-child) { margin-top: 0.25rem; }
+/*li:not(:first-child) { margin-top: 0.25rem; }*/
 
 figure { padding: 0;
          border: 0;
@@ -172,6 +185,12 @@ a:link::selection { text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #
 a:link::-moz-selection { text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
                          background: #b4d5fe; }
 
+a.no_dec {
+color: #C42C00;
+text-decoration: none;
+}
+
+
 /* Sidenotes, margin notes, figures, captions */
 img { max-width: 100%; }
 
@@ -180,6 +199,10 @@ margin: auto;
 width: 60%;}
 
 p.solid_b {border-style: none none solid none;
+}
+p.right {
+	padding: 0px 0px;
+	text-align: right;
 }
 
 .sidenote, .marginnote { float: right;
