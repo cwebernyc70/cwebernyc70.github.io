@@ -1,0 +1,15 @@
+#CD343B
+
+#802025
+#CC9985
+#806053
+#333333
+#CCCCCC
+
+background color #fffff8
+
+http://www.colorexplorer.com/currentpalette.aspx
+
+
+move output file
+look for where the color of menu item is set
