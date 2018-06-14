@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+/*
+The url for the fonts will not work using file display. Does work with a server.
+To test using File Open from browser,
+   prepend: "/Users/admin/" + path to assets in output
+*/
+
+
+
+div.quote {
+	margin: 1em 0;
+}
+div.quote > blockquote {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+div.quote > blockquote, div.quote > blockquote > p {
+	font-style: italic;
+}
+
+/* Chapter Epigraphs */
+div.epigraph {
+	margin: 5em 0;
+}
+div.epigraph > blockquote {
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+div.epigraph > blockquote, div.epigraph > blockquote > p {
+	font-style: italic;
+}
+div.epigraph > blockquote > footer {
+	font-style: normal;
+}
+div.epigraph > blockquote > footer > cite {
+	font-style: italic;
+}
+/* end chapter epigraphs styles */
+
+blockquote {
+	font-size: 1.4rem;
+}
+blockquote p {
+	width: 55%;
+	margin-right: 40px;
+}
+blockquote footer {
+	width: 55%;
+	font-size: 1.1rem;
+	text-align: right;
+}
+
+section > p, section > footer, section > table {
+	width: 55%;
+}
+ /*article > p, article > footer, article > table \{
+aidth: 55%: }*/
+ /*section > article {width: 55%; }*/
+
+ /* 50 + 5 == 55, to be the same width as paragraph */
+section > ol, section > ul {
+	width: 50%;
+	-webkit-padding-start: 5%;
+}
+
+figure {
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	max-width: 55%;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	margin: 0 0 3em 0;
+}
+figcaption {
+	float: right;
+	clear: right;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 1.1rem;
+	line-height: 1.6;
+	vertical-align: baseline;
+	position: relative;
+	max-width: 40%;
+}
+figure.fullwidth figcaption {
+	margin-right: 24%;
+}
+
+/* needed for posts; changed name to use underscore
+to remain consistent with using dash in css but underscore in
+my names */
+
+.entry_title {
+	font-size: 1.5em;
+}
+
+.postindex article {
+	border-bottom: 1px solid #4F5151;
+	padding-bottom: 1em;
+}
+
+.m_note_holder article{
+	border-bottom: 1px solid #4F5151;
+	padding-bottom: 1em;
+}
+
+:link {
+	color: #CD343B;
+	text-decoration: none;
+}
+:visited {
+	color: #CD343B;
+}
+:link:hover, :visited:hover {
+	color: #CD343B;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+.sr-only-focusable:active,.sr-only-focusable:focus {
+	position: static;
+	width: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	clip: auto;
+}
+
+/* Important that this be set before the first @media query turns on display */
+input.margin-toggle {
+	display: none;
+}
+
+/* Next, styles for responsive design:
+
+rd - responsive design
+	_b for body, used to adjust font size
+	_s for section, used to adjust width of display area
+
+Break points chosen to have text display with roughly 60 characters per line
+	for all devices.
+*/
+
+/* The main break about showing the image is at 760.
+This first set of styles apply all the way to 760,
+with small tweaks via rd_b and rd_s for fonts and width at
+at screen widths of 420 and 600 */
+@media screen and (max-width: 759px) {
+	.rd_b {
+		font-size: 1.1rem;
+	}
+	.rd_s {
+		width: 95%;
+	}
+	hr, section > p, section > footer, section > table, section > article, article > p, article > div {
+		width: 95%;
+		margin: auto;
+	}
+	pre.code {
+		width: 97%;
+	}
+	section > ol {
+		width: 90%;
+	}
+	section > ul {
+		width: 90%;
+	}
+	figure {
+		max-width: 90%;
+	}
+	figcaption, figure.fullwidth figcaption {
+		margin-right: 0%;
+	 	max-width: none;
+	}
+	blockquote {
+		margin-left: 1.5em;
+		margin-right: 0em;
+	}
+	blockquote p, blockquote footer {
+		width: 100%;
+	}
+	/*#cover {display: none}
+	cover is an id */
+	label.margin-toggle:not(.sidenote-number) {
+		display: inline;
+	 }
+	div.margin-toggle {
+		text-align: right;
+		margin-bottom: 1rem
+	}
+
+	.sidenote, .marginnote, .cmarginnote {
+		display: none;
+	}
+
+	.margin-toggle:checked + .sidenote,
+	.margin-toggle:checked + .marginnote {
+		display: block;
+		float: right;
+		clear: both;
+		padding-left: 5%;
+		width: 25%;
+		margin: 1rem 2.5%;
+		vertical-align: baseline;
+		position: relative;
+		label {
+			cursor: pointer;
+		}
+		div.table-wrapper, table {
+			width: 85%;
+		}
+		img {
+			width: 100%;
+		}
+	}
+	.margin-toggle:checked + .cmarginnote {
+		display: block;
+		float: right;
+		clear: both;
+		padding-left: 5%;
+		width: 25%;
+		margin: 1rem 2.5%;
+		vertical-align: baseline;
+		position: relative;
+		text-align: center;
+		label {
+			cursor: pointer;
+		}
+		div.table-wrapper, table {
+			width: 85%;
+		}
+		img {
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (min-width: 420px) {
+	.rd_b {
+		font-size: 1.2rem;
+	}
+	.rd_s {
+		width: 95%;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.rd_b {
+		font-size: 1.2rem;
+	}
+	.rd_s {
+		width: 90%;
+	}
+}
