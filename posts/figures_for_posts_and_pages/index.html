@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/cweber.css" rel="stylesheet" type="text/css">
+		<link rel="canonical" href="http://127.0.0.1:7600">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#cd343b">
+		<meta name="apple-mobile-web-app-title" content="Caroline Weber">
+		<meta name="application-name" content="Caroline Weber">
+		<meta name="msapplication-TileColor" content="#b91d47">
+		<meta name="theme-color" content="#ffffff">
+		<style>
+		</style>
+		<title>CWeber: Blog</title>
+	</head>
+	<body class="rd_b">
+		<a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
+			<header>
+				<div class="center">
+					<a href="http://127.0.0.1:7600" rel="home">
+					<img src="/logo.svg" alt="Caroline Weber" id="logo"></a>
+				</div>
+				<nav role="navigation" >
+					<ul class="nav_menu">
+                        <li class="current_page"><a href="/pages/blog/">Blog</a></li>
+						<li class="other_pages"><a href="/pages/gallery/">Gallery</a></li>
+						<li class="other_pages"><a href="/pages/updates/">Updates</a></li>
+						<li class="other_pages"><a href="/pages/publications/">Publications</a></li>
+						<li class="current_page"><a href="/pages/about/">About</a></li>
+					</ul>
+				</nav>
+			</header>
+			<article id="main" role="main">
+				<section>
+<h2>Putting Figures into Posts and Pages</h2>
+<h4>Saturday January 1, 2022</h4>
+<p>This post has some information about how to add figures to a post.<span class ="period" > </span> </p>
+ <h2>Figures</h2>
+ <h2>1.<span class ="period" > </span>Margin Figures</h2>
+ <h3>a)<span class ="after_paren" > </span>Separate paragraph</h3>
+ <p>A blank line in one of<span class ="after_f" > </span>these .md files translates into a new paragraph on the html page.</p>
+ <p>The tag inside   delimiters can be its own paragraph.<span class ="period" > </span>For example,<span class ="comma" > </span>the file for your about page,<span class ="comma" > </span>about.md,<span class ="comma" > </span>starts like this:</p>
+ <blockquote><pre><code>## About Me
+</code></pre>
+</blockquote>
+ ><blockquote><pre><code> <span class="marginnote"><img src="/images/cweber_about.jpg"></span>
+</code></pre>
+</blockquote>
+ ><blockquote><pre><code>My job title is Professor of<span class ="after_f" > </span>French ...
+</code></pre>
+</blockquote>
+ ><p>In this case,<span class ="comma" > </span>the figure will be aligned with the top of<span class ="after_f" > </span>the paragraph that follows.</p>
+ <h3>b)<span class ="after_paren" > </span>In the middle of<span class ="after_f" > </span>a paragraph</h3>
+ <p>You can also put a margin figure in the middle of<span class ="after_f" > </span>a paragraph,<span class ="comma" > </span>like this:</p>
+ <blockquote><p>Lorem ipsum dolor sit amet,<span class ="comma" > </span>consectetur adipiscing elit,<span class ="comma" > </span>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class ="period" > </span>Ut enim ad minim veniam,<span class ="comma" > </span>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class ="period" > </span>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<span class ="period" > </span> <span class="marginnote"><img src="/images/cweber_about.jpg"></span>Excepteur sint occaecat cupidatat non proident,<span class ="comma" > </span>sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</blockquote>
+ <p>Then the picture will be in the margin,<span class ="comma" > </span>starting roughly at the same level as the text that surrounds it.</p>
+ <h3>2.<span class ="period" > </span>Figure and fullwidth_figure</h3>
+ <p>These should both in their own paragraphs,<span class ="comma" > </span>so set off<span class ="after_f" > </span>in one of<span class ="after_f" > </span>these .md files by blank lines above and below,<span class ="comma" > </span>like this:</p>
+ <blockquote><p> <figure><span class="marginnote">This is the caption that shows up in the margin to the right of<span class ="after_f" > </span>the picture.</span><img src="/images/homepageelisabeth1880bypaulberthier.jpg"></figure></p>
+</blockquote>
+ <blockquote><p> <figure class="fullwidth"><img src="/images/homepageswans.jpg"></figure></p>
+</blockquote>
+ <p>For the fullwidth_figure,<span class ="comma" > </span>assume for now that there is no good way to display a caption.<span class ="period" > </span>For now,<span class ="comma" > </span>best to describe the figure in the surrounding text.<span class ="period" > </span>See for example the text before the picture of<span class ="after_f" > </span>the swans on gallery.md.</p>
+ </section></article></body></html>
